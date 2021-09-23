@@ -13,13 +13,17 @@
       console.log(twoDecimalPoints);
 
       let stringTest = `I am the very model of a modern major general`;
-      stringTest = stringTest.toUpperCase();
-      let indexofM = stringTest.indexOf(`M`);
+      let indexofm = stringTest.indexOf(`m`);
+      console.log(indexofm);
+
+      let stringTestcaps = `I am the very model of a modern major general`;
+      stringTestcaps = stringTest.toUpperCase();
+      let indexofM = stringTestcaps.indexOf(`M`);
       console.log(indexofM);
 
-      let start = stringTest.indexOf("MODEL");
-      let end = stringTest.indexOf("MAJOR");
-      let subStr = stringTest.substring(start, end);
+      let start = stringTestcaps.indexOf("MODEL");
+      let end = stringTestcaps.indexOf("MAJOR");
+      let subStr = stringTestcaps.substring(start, end);
       console.log(subStr);
 
       document.write("<p>" + subStr + "</p>");
