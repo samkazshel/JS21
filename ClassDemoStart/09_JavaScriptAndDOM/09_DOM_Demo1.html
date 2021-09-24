@@ -1,31 +1,56 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <title>JS DOM2</title>
-</head>
-<body>
-    <p>The world believes that: Success make you happy. The truth is: Happiness 
-    makes you successful.</p>
+  </head>
+  <body>
+    <p>
+      The world believes that: Success make you happy. The truth is: Happiness
+      makes you successful.
+    </p>
     <div>
-        <p id="para2" class="test">This is paragraph text.</p>
-        <p>This is paragraph text.</p>
-        <p>This is paragraph text.</p>
+      <p id="para2" class="test">This is paragraph text.</p>
+      <p>This is paragraph text.</p>
+      <p>This is paragraph text.</p>
     </div>
-   <ul>
-       <li><a href="text.doc">word document</a></li>
-       <li><a href="text2.doc">word document</a></li>
-       <li><a href="image.ppt">powerpoint document</a></li>
-       <li><a href="image2.ppt">powerpoint2 document</a></li>
-   </ul>
+    <ul>
+      <li><a href="text.doc">word document</a></li>
+      <li><a href="text2.doc">word document</a></li>
+      <li><a href="image.ppt">powerpoint document</a></li>
+      <li><a href="image2.ppt">powerpoint2 document</a></li>
+    </ul>
     <script>
-       
+      //   let allP = document.getElementById("para2"); // this is one way of selecting an item
+      //   let allP = document.querySelector("#para2");
+      //   allP.style.backgroundColor = "#ff0000";
 
+      //   let allP = document.getElementsByTagName("p");
+      //   let allP = document.querySelectorAll("p"); //this is the WC3 prefered method as it lets us select items relationally
+      //   for (let i = 0; i < allP.length; i++) {
+      //     allP[i].style.backgroundColor = "#ff0000";
+      //   }
 
+      //   let wordDoc = document.querySelectorAll("a[href='doc']");
+      //   for (let i = 0; i < wordDoc.length; i++) {
+      //     wordDoc[i].style.backgroundColor = "#ff0000";
+      //   }
+      //^= starting with value
+      //$= ending with value
+      //*= containing with value
 
+      //create new content
+      //w3c
 
+      //   let allP = document.querySelector("#para2");
+      //   let newP = document.createElement("p");
+      //   let theText = document.createTextNode("I love javascript");
+      //   newP.appendChild(theText);
+      //   allP.appendChild(newP);
 
-       
+      //this is another way that breaks W3C standard
+      let allP = document.querySelector("#para2");
+      //   allP.innerHTML += "<h2>We love javascript.</h2>";
+      allP.textContent += "<h2>We love javascript.</h2>";
     </script>
-
-</body>
+  </body>
 </html>
