@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="placeholder"></div>
+    <script>
+      const COLORS = [
+        "red",
+        "green",
+        "blue",
+        "orange",
+        "lime",
+        "olive",
+        "black",
+        "yellow",
+      ];
+
+      buildIP = (placeholder, num) => {
+        let i = 0;
+        do {
+          let p = document.createElement("p");
+          let newText = document.createTextNode(
+            "Have you tried turning it off and on again? "
+          );
+          p.style.color = COLORS[parseInt(Math.random() * COLORS.length)];
+          p.appendChild(newText);
+          placeholder.appendChild(p);
+          i++;
+        } while (i < num);
+      };
+      buildIP(document.querySelector("#placeholder"), 4);
+    </script>
+  </body>
+</html>
