@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>L4 Objects Demo 8</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    //Objects in JavaScript are key – value pairs
-    //Where standard arrays are index – value pairs
-    //Keys are very useful for providing semantic data
+      //Objects in JavaScript are key – value pairs
+      //Where standard arrays are index – value pairs
+      //Keys are very useful for providing semantic data
 
-    
+      //   let student = new Object();
+      //   student["name"] = "Ali";
+      //   student["id"] = "1234";
+      //   student["courseCode"] = "QAJVSC";
+      //   student.email = "ali@qa.com"; // this notation is known as an expando property
+      //   console.log(student);
+      //   console.log(student["name"]);
+      //   console.log(student.email);
+      //objects do no have length properties, however they key part of a object is often reffered to as a property.
 
-    
-    // The object can have new properties added at any time
-    // Known as an expando property
+      // The object can have new properties added at any time
+      // Known as an expando property
 
-    
+      //The key part of an object is often referred to as a property
+      //it can be directly accessed
 
+      //When working with objects, the for in loop is very useful
+      // key holds the string value of the key
+      // student is the object
+      // So it loops for each property in the object
 
+      //   for (let key in student) {
+      //     console.log(`${key}: ${student[key]}`);
+      //   } // for object, for in loop is the only way we can move through it.
 
-    //The key part of an object is often referred to as a property 
-    //it can be directly accessed 
+      //Objects – literal notation
+      //There is an alternative syntactic approach to defining objects
 
+      let student2 = { name: "Lukas", id: "1234", courseCode: "QAJVSC" }; // last key value pair does not end with a comma
+      console.log(student2);
 
-    //When working with objects, the for in loop is very useful
-    // key holds the string value of the key
-    // student is the object
-    // So it loops for each property in the object
+      //This can be combined into more complex arrays
+      //Below is an indexed array containing two object literals
+      //Note the comma separator
 
- 
-    //Objects – literal notation
-    //There is an alternative syntactic approach to defining objects 
+      let classRoom = [
+        { name: "Lukas", id: "1234", courseCode: "QAJVSC" },
+        { name: "Daniel", id: "5678", courseCode: "QAJVSC" },
+      ]; // this also known as a two dimensional array
+      // which is a very popular data structure, JSON (JavaScript Object Notation)
 
-
-
-
-    //This can be combined into more complex arrays
-    //Below is an indexed array containing two object literals
-    //Note the comma separator
-
-
-
-
-
-
-</script>
-
-    
-</body>
+      for (let i = 0; i < classRoom.length; i++) {
+        for (let key in classRoom[i]) {
+          console.log(key + " : " + classRoom[i][key]);
+        }
+      }
+    </script>
+  </body>
 </html>
